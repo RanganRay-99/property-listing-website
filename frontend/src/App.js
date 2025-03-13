@@ -1,10 +1,9 @@
-import React from 'react';
-import PropertyList from './components/PropertyList';
-import './styles.css';
+import React from "react";
+import PropertyList from "./components/PropertyList";
 
 const App = () => {
     return (
-        <div className="App">
+        <div>
             <h1>Property Listings</h1>
             <PropertyList />
         </div>
