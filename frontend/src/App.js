@@ -14,7 +14,7 @@ const App = () => {
 
             {/* Introductory text */}
             <div className="intro">
-                <p>Welcome to Property Listings! Explore our curated collection of properties and find your dream home today.</p>
+                <p>Welcome to Property Listings! Explore our curated collection of properties and find your dream home today. My Name is Rangan</p>
             </div>
 
             {/* Filters and Property List */}
