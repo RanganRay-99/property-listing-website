@@ -89,6 +89,6 @@ def not_found(error):
 def bad_request(error):
     return jsonify({"error": str(error)}), 400
 
-# Run the Flask app
+# Run the Flask app on port 8000
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=8000)

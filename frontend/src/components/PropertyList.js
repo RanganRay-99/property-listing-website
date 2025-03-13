@@ -12,7 +12,7 @@ const PropertyList = () => {
 
     // Fetch properties from backend
     useEffect(() => {
-        axios.get('http://localhost:5000/api/properties')
+        axios.get('http://localhost:8000/api/properties')
             .then(response => setProperties(response.data))
             .catch(error => console.error(error));
     }, []);
