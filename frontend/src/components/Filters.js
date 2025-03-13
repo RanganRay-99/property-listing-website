@@ -1,40 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Filters = ({ onFilterChange }) => {
-    const [filters, setFilters] = useState({
-        price: '',
-        bedrooms: ''
-    });
+    const [price, setPrice] = useState("");
+    const [bedrooms, setBedrooms] = useState("");
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFilters({
-            ...filters,
-            [name]: value
-        });
-    };
-
-    const handleApplyFilters = () => {
-        onFilterChange(filters);
+    const handleFilter = () => {
+        onFilterChange({ price, bedrooms });
     };
 
     return (
         <div className="filters">
             <input
                 type="number"
-                name="price"
                 placeholder="Max Price"
-                value={filters.price}
-                onChange={handleChange}
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
             />
             <input
                 type="number"
-                name="bedrooms"
                 placeholder="Min Bedrooms"
-                value={filters.bedrooms}
-                onChange={handleChange}
+                value={bedrooms}
+                onChange={(e) => setBedrooms(e.target.value)}
             />
-            <button onClick={handleApplyFilters}>Apply Filters</button>
+            <button onClick={handleFilter}>Apply Filters</button>
         </div>
     );
 };

@@ -1,57 +1,87 @@
-/* styles.css */
+/* Global Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-}
-
-.App {
-  padding: 20px;
   text-align: center;
 }
 
-.property-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+/* Header Section */
+.header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
 }
 
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+/* Property List Layout */
+.property-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Property Card */
 .property-card {
   background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
   padding: 15px;
-  width: 300px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
 .property-card img {
   width: 100%;
-  border-radius: 8px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
+.property-card h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.property-card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Filter Section */
 .filters {
-  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  background: white;
+  justify-content: center;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.filters input {
-  margin: 5px;
+.filters input,
+.filters button {
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
 .filters button {
-  padding: 8px 16px;
   background-color: #007bff;
   color: white;
-  border: none;
-  border-radius: 4px;
   cursor: pointer;
 }
 
-.filters button:hover {
-  background-color: #0056b3;
+/* Footer */
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
 }
